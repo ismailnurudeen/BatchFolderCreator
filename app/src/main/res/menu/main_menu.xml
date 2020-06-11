@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/menu_switch_display"
+        android:icon="@drawable/ic_brightness_4_black_24dp"
+        android:title="Switch Display (Dark/Light)"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_about"
+        android:title="@string/about" />
+    <item
+        android:id="@+id/menu_help"
+        android:title="@string/help" />
+</menu>

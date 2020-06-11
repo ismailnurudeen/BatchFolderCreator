@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Batch Folder Creator</string>
+    <string name="create_directories">Create Directories</string>
+    <string name="root_directory">Root Directory:</string>
+    <string name="save">Save</string>
+    <string name="export">Export</string>
+    <string name="help">Help</string>
+    <string name="about">About</string>
+
+    <!--    About Page Values-->
+    <string name="my_email">ibrightstar247@gmail.com</string>
+    <string name="my_fb_id">ismailnurudeen247</string>
+    <string name="my_twitter_id">TeenMutantCoder</string>
+    <string name="about_me">We build smart apps that solve complex problems in a simple way.</string>
+    <string name="my_website">http://ismailnurudeen.github.io</string>
+    <string name="my_linkedin_id">ismail-nurudeen-03639414b</string>
+    <string name="my_phone_num">+2348163471885</string>
+    <string name="my_name">Nurudroid</string>
+    <string name="playstore_username">Nurudroid</string>
+    <string name="about_subtitle">Smart Apps Developer</string>
+    <string name="share_app">Share App</string>
+</resources>

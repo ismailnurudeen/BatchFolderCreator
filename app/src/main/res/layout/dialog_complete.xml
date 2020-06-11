@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/circular_bg"
+        android:padding="8dp"
+        android:src="@drawable/ic_done_all_black_24dp"
+        android:tint="#ffffff" />
+
+    <TextView
+        android:id="@+id/completion_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Folders Creation Complete!"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/complete_dialog_root_dir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        tools:text="storage/0/DCMI/Camera/" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/listDivider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:id="@+id/successCountTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_done_black_24dp"
+            android:drawablePadding="8dp"
+            android:drawableTint="@android:color/holo_green_dark"
+            android:fontFamily="sans-serif-black"
+            tools:text="5 Successful" />
+
+        <TextView
+            android:id="@+id/failureCountTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_close_black_24dp"
+            android:drawablePadding="8dp"
+            android:drawableTint="@android:color/holo_red_dark"
+            android:fontFamily="sans-serif-black"
+            tools:text="0 Failed" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/listDivider" />
+
+    <Button
+        android:id="@+id/close_complete_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Ok" />
+</LinearLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/mainAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/mainToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:title="@string/app_name"
+                app:titleTextColor="@android:color/white" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:fontFamily="sans-serif-black"
+                android:text="Saved Paths"
+                android:textColor="@color/headerTextColor"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/create_paths_btn_1"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/circular_bg"
+                android:src="@drawable/ic_add_black_24dp"
+                android:tint="@android:color/white" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="8dp"
+            android:background="?android:attr/listDivider" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/no_prev_paths_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="No Saved Paths Yet!"
+                    android:textSize="18sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="Import directory paths from CSV or create new directory paths"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp">
+
+                    <Button
+                        android:id="@+id/create_paths_btn"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_frame"
+                        android:drawableEnd="@drawable/ic_folder_open_black_24dp"
+                        android:padding="8dp"
+                        android:text="Create Paths"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/import_csv_btn"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_frame"
+                        android:drawableEnd="@drawable/ic_file_upload_black_24dp"
+                        android:ellipsize="marquee"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:singleLine="true"
+                        android:text="Import Paths (CSV)"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recent_paths_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_saved_path"
+                tools:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/importCsvFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="80dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_file_upload_black_24dp"
+        android:tint="@android:color/white"
+        android:visibility="invisible"
+        app:layout_anchorGravity="bottom|end" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_root_dir_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/root_directory"
+        android:textColor="@color/headerTextColor"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/dialog_root_dir_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:textStyle="italic"
+        android:hint="Hello World!"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/listDivider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/path_input_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="8dp"
+        tools:ignore="RtlSymmetry">
+
+        <EditText
+            android:id="@+id/dialog_path_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Directory Path e.g DCMI/Camera/"
+            android:importantForAutofill="no"
+            android:padding="8dp"
+            android:textColor="#000000"
+            android:textColorHint="#616161"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/dialog_select_path_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_folder_open_black_24dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/dialog_cancel"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/dialog_add_path"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add Path" />
+
+
+    </LinearLayout>
+</LinearLayout>
